@@ -7,9 +7,8 @@ const rows = fileText.trim().split("\n");
 let sum = 0;
 
 for (const row of rows) {
-  const [gameText, turnsText] = row.split(": ");
+  const [, turnsText] = row.split(": ");
 
-  const id = gameText.replace("Game ", "");
   const turns = turnsText.split("; ");
 
   let maxRedInTurn = 0;
@@ -31,9 +30,7 @@ for (const row of rows) {
     }),
   );
 
-  if (maxRedInTurn <= 12 && maxBlueInTurn <= 14 && maxGreenInTurn <= 13) {
-    sum += Number(id);
-  }
+  sum += maxRedInTurn * maxGreenInTurn * maxBlueInTurn;
 }
 
 console.log(sum);
