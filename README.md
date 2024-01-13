@@ -1,9 +1,4 @@
-# AoC 2023 RUST!!!!
+# AoC 2023 in Typescript :| 
 
-
-## Learning to code in rust
-I've almost never use rust, then I saw the oportunity to try the advent of code 2023 challenge to 
-finnally use the language properly.
-
-
+Just training plain ol' typescript
 
