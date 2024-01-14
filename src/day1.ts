@@ -12,11 +12,11 @@ const result = fileText
     let lastNumChar: string | undefined = undefined;
 
     for (let index = 0; index < value.length; index++) {
-      if (!isNaN(parseInt(value[index])) && !firstNumChar) {
+      if (!firstNumChar && !isNaN(parseInt(value[index]))) {
         firstNumChar = value[index];
       }
 
-      if (!isNaN(parseInt(value[value.length - 1 - index])) && !lastNumChar) {
+      if (!lastNumChar && !isNaN(parseInt(value[value.length - 1 - index]))) {
         lastNumChar = value[value.length - 1 - index];
       }
 
