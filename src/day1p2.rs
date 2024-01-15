@@ -2,10 +2,23 @@ use std::io;
 
 use crate::get_file_text;
 
-pub fn solve_day_1() -> io::Result<()> {
+pub fn solve_day_1_part_2() -> io::Result<()> {
     let text = get_file_text("src/day1.input")?;
 
-    let rows = text.trim().split("\n");
+    let original_text = String::from(text);
+
+    let replaced_text = original_text
+        .replace("one", "o1e")
+        .replace("two", "t2o")
+        .replace("three", "t3e")
+        .replace("four", "f4r")
+        .replace("five", "f5e")
+        .replace("six", "s6x")
+        .replace("seven", "s7n")
+        .replace("eight", "e8t")
+        .replace("nine", "n9e");
+
+    let rows = replaced_text.trim().split("\n");
 
     let mut sum = 0;
 
@@ -43,7 +56,7 @@ pub fn solve_day_1() -> io::Result<()> {
         };
     }
 
-    println!("Day_1: {}", sum);
+    println!("Day_1_Part_2: {}", sum);
 
     return Ok(());
 }
