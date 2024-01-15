@@ -45,5 +45,5 @@ pub fn solve_day_1() -> io::Result<()> {
 
     println!("Day_1: {}", sum);
 
-    return Ok(());
+    Ok(())
 }
