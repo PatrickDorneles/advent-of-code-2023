@@ -1,6 +1,8 @@
 use core::str;
 use std::{env, fs::File, io::Read, io::Result};
 
+use day1::solve_day_1;
+
 mod day1;
 
 pub fn get_file_text(file_name: &str) -> Result<String> {
@@ -17,6 +19,6 @@ pub fn get_file_text(file_name: &str) -> Result<String> {
 }
 
 fn main() -> Result<()> {
-    println!("{}", get_file_text("src/test_file")?);
+    solve_day_1()?;
     return Ok(());
 }
